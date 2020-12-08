@@ -1,0 +1,125 @@
+* Create "Loading Order" ---------- MANUAL
+* Update "Loading Order STEP" to "Safe to load" -------- AUTO
+* Update "Loading Order STEP" to "Sortie JOA"
+* Check if GPS Event->location = delivery->location -------- AUTO
+* Update Delivery status to "Delivered" and "Loading Order STATUS" to "Completed" ---------- MANUALLY
+
+
+- When creating "Loading Order"
+	1- Loading status = "Pending"
+	1- Loading step = "Not indicated"
+	2- Vehicle status = "Task assigned"
+	2- Vehicle position = "GPS event location"
+	3- Delivery status = "Pending"
+
+* Update "Loading Order STEP" to "Safe to load" -------- AUTO
+
+- When Loading Order status is "Pending" and Loading step = "Safe to load"
+	1- Loading status = "In progress"
+	1- Loading step = "Safe to load"
+	2- Vehicle status = "In use"
+	2- Vehicle position = "GPS event location"
+	3- Delivery status = "Pending"
+	
+- When Loading Order status is "In progress" and Loading step = "Attente de chargement"
+	1- Loading status = "In progress"
+	1- Loading step = "Attente de chargement"
+	2- Vehicle status = "In use"
+	2- Vehicle position = "GPS event location"
+	3- Delivery status = "Pending"
+	
+- When Loading Order status is "In progress" and Loading step = "Chargement"
+	1- Loading status = "In progress"
+	1- Loading step = "Chargement"
+	2- Vehicle status = "In use"
+	2- Vehicle position = "GPS event location"
+	3- Delivery status = "Pending"
+	
+- When Loading Order status is "In progress" and Loading step = "Scelle"
+	1- Loading status = "In progress"
+	1- Loading step = "Scelle"
+	2- Vehicle status = "In use"
+	2- Vehicle position = "GPS event location"
+	3- Delivery status = "Pending"
+
+* Update "Loading Order STEP" to "Sortie JOA"
+
+- When Loading Order status is "In progress" and Loading step = "Sortie JOA"
+	1- Loading status = "Ready to delivery"
+	1- Loading step = "Out for delivery"
+	2- Vehicle status = "In use"
+	2- Vehicle position = "GPS event location"
+	3- Delivery status = "In progress"
+	4- Email client Delivey on route
+	
+* Check if GPS Event->location = delivery->location -------- AUTO
+* Update "Loading Order STATUS" to "Completed" and Delivery status to "Delivered" ---------- MANUALLY
+	
+- When Loading Order step is "Completed" and Loading Order status is "In progress" and GPSEvent->location = delivery->location
+	1- Loading status = "Completed"
+	2- Vehicle status = "Unoccupied"
+	2- Vehicle position = "GPS event location"
+	3- Delivery status = "Delivered"
+	4- Email Tranporter to put vehicle ready to use
+	
+- When deleting "Loading Order"
+	1- Loading status = "Cancel"
+	1- Loading step = "Not indicated"
+	2- Vehicle status = "Ready to use"
+	2- Vehicle position = "GPS event location"
+	3- Delivery status = "Cancel"
+
+
+
+THOR JOA
+=======
+	- THOR / DINASA - SODIGAZ - STL
+	- THOR / DINASA - PARKING
+	- THOR / DINASA - COULOIR D'ACCÈS
+	- THOR / JOA - CALIBRAGE
+	- THOR / JOA - ATTENTE CHARGEMENT
+	- THOR / SODIGAZ - ATTENTE CHARGEMENT V2	
+	**THOR / SODIGAZ CHARGEMENT V2
+	- THOR / JOA - CHARGEMENT C1
+	- THOR / JOA - CHARGEMENT C2
+	- THOR / JOA - CHARGEMENT C3
+	- THOR / JOA - ATTENTE SCELLÉ	
+	- THOR / JOA - SORTIE
+	
+	
+THOR HAITI GAZ
+============	
+	- THOR / HAITI GAZ - STL V1
+	- THOR / HAITI GAZ - ATTENTE CHARGEMENT  V1
+	- THOR / HAITI GAZ - CHARGEMENT  V1
+	** THOR / HAITI GAZ - COULOIR D'ACCÈS  V1
+	** THOR / HAITI GAZ - PARKING & GARAGE V1
+	
+
+TEVASA
+======
+	- TEVASA / DINASA - PARKING / STL
+	- TEVASA / DINASA - ATTENTE CHARGEMENT
+	- TEVASA / DINASA - CHARGEMENT
+	- TEVASA / DINASA - CHARGEMENT MAZOUT (OIL FUEL)
+	- TEVASA / DINASA - COULOIR CHARGEMENT MAZOUT (F.O)
+	- TEVASA / DINASA - SCELLÉ
+	- TEVASA / DINASA - SORTIE
+	
+
+	
+TGV
+===	
+	- TGV / SODIGAZ - PARKING - STL BV
+	- TGV / SODIGAZ - PONT-BASCULE BV
+	- TGV / SODIGAZ - COULOIR CHARGEMENT - B
+	- TGV / SODIGAZ - COULOIR CHARGEMENT - V	
+	- TGV / SODIGAZ - CHARGEMENT - B
+	- TGV / SODIGAZ - CHARGEMENT - V
+	
+
+If Vehicle = Dinasa
+If gpsData->placeId = '12123132424' || gpsData->placeId = 'jjjjj'
+
+
+

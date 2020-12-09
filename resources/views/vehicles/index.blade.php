@@ -200,6 +200,7 @@
 															<td>{{ $vehicle->n_citerne }} </td>
 															<td>{{ $vehicle->capacity }} </td>
 															<td>
+																<!-- <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> -->
 																	@if( $vehicle->is_new == 1)
 																		{{ 'Brand new' }}
 																	@else
@@ -208,12 +209,25 @@
 															</td>
 															
 															<td class="text-center">
-																<div class="badge badge-success">{{ $vehicle->status }} </div>
+																@if( $vehicle->status == 'In use')
+																	<div class="badge badge-primary">{{ $vehicle->status }} </div>
+																@elseif( $vehicle->status == 'Ready to use')
+																	<div class="badge badge-success">{{ $vehicle->status }} </div>
+																@elseif( $vehicle->status == 'Out of service')
+																	<div class="badge badge-danger">{{ $vehicle->status }} </div>
+																@else
+																	<div class="badge badge-warning">{{ $vehicle->status }} </div>
+																@endif
+																
 															</td>
 
-															<td>
+															<td class="text-justify" style="width: 150px">
 																@can('edit-users')
-																	<a href="{{ route('vehicle.vehicles.edit', $vehicle->id)}}"><button class="badge badge-danger" style ="float:left">Edit</button></a>
+																	<a href="{{ route('vehicle.vehicles.edit', $vehicle->id)}}">
+																		<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-warning" style ="float:left">
+																			<i class="fa fa-fw" aria-hidden="true" title="Copy to use pencil-square-o"></i>
+																		</button>
+																	</a>
 																@endcan
 																
 																
@@ -221,12 +235,16 @@
 																<form action ="{{ route('vehicle.vehicles.destroy', $vehicle)}}" method = "POST" class="" >
 																	@csrf
 																	{{ method_field('DELETE') }}
-																	<button type="submit" class="badge badge-warning" style=" margin-left:2px">Delete</button> 
-																	<!-- <select class="badge badge-secondary">
-																		<option>Ready to use</option>
-																		<option>Out of service</option>
-																	</select> -->
-																	<button type="reset" class="badge badge-secondary" style="margin-top: -26px; margin-left: 119px; width:120px" > Change status</button> 
+																	<button type="submit" class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger" style=" margin-left:2px"> 
+																		<!-- <i class="pe-7s-trash btn-icon-wrapper"></i> -->
+																		<i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i>
+																	</button> 
+																	<!-- <div class="d-flex flex-row">
+																		<div class="p-2">Flex item 1</div>
+																		<div class="p-2">Flex item 2</div>
+																		<div class="p-2">Flex item 3</div>
+																	</div> -->
+																	
 																</form>
 																@endcan
 															</td>

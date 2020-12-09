@@ -32,7 +32,7 @@ class VehiclesController extends Controller
     {
 		$email = 'ppestime@dinasa.ht';
 		$vehicle = 'Toyota rav4';
-		
+		 
 		//VehiclesController::emailTransporter($email, $vehicle); 
 		//VehiclesController::emailClient($email); 
 		//return 1;

@@ -19,6 +19,7 @@
 								  <th scope="col">Action</th>
 								</tr>
 							  </thead>
+							  
 							  <tbody>
 								  @foreach($vehicles as $vehicle)
 									

@@ -82,7 +82,7 @@
 			</tr>
 		@endforeach						
 	</tbody>
-	<tfooter>
+	<!-- <tfooter>
 		<tr>
 		<th scope="col">Vehicle</th>
 		<th scope="col">Position</th>
@@ -93,5 +93,5 @@
 		<th scope="col">Status</th>
 		<th scope="col">Action</th>
 		</tr>
-	</tfooter>
+	</tfooter> -->
 </table>

@@ -76,9 +76,19 @@
 												{{ $loading->step }}
 											@endif
 									  </td>
-											
-									  <td>{{ $loading->status }} </td>
+										
+									  <td class="text-center">
+									  	@if( $loading->status == 'Ready for delivery')
+											<div class="badge badge-success">{{ $loading->status }} </div>
+										@elseif( $loading->status == 'In progress')
+											<div class="badge badge-warning">{{ $loading->status }} </div>
+										@else
+											<div class="badge badge-danger">{{ $loading->status }} </div>
+										@endif  
+									  </td>
 									  <td>
+
+									  
 									 
 									  
 									  @can('delete-users')

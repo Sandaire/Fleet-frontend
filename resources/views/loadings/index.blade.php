@@ -24,11 +24,12 @@
 
 				  @section('panel')
 					<!-- Content -->
-					  <div class="column content">
-					  
-						<a href="{{ route('loading.loadings.create') }}"><button type="button" class="btn btn-primary" float-right> + Loading order</button></a>
-						<a href="('loading.loadings.addDelivery', $loading) " style="float:right"> Advanced search</a>
+					<div class="" style="background-color: #FFFFFF; margin-top:-35px; height:80px;">
+					<a href="('loading.loadings.addDelivery', $loading) " style="float:right; margin-top:20px; font-size:16px; color:#008a74" > Advanced search</a>	
+					<a href="{{ route('loading.loadings.create') }}"><button type="button" class="btn" float-right style="margin-top:20px; background-color:#008a74; color: white; font-size:16px; margin-left:5px"> + Loading order</button></a>
+					</div>
 
+					  <div class="column content">
 							<div class="card-body">
 							
 							<table class = "table">

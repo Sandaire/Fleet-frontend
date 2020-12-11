@@ -4,7 +4,7 @@
   <!--START:: SECTION CARD PERCENTAGE-->
   <div class="row">
     <div class="col-md-6 col-lg-3">
-        <div class="card-shadow-info mb-3 widget-chart widget-chart2 text-left card">
+        <div class="card-info mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">
                 <div class="widget-content-outer">
                     <div class="widget-content-wrapper">
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="col-md-6 col-lg-3">
-        <div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card">
+        <div class="card-danger mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">
                 <div class="widget-content-outer">
                     <div class="widget-content-wrapper">
@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="col-md-6 col-lg-3">
-        <div class="card-shadow-warning mb-3 widget-chart widget-chart2 text-left card">
+        <div class="card-warning mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">
                 <div class="widget-content-outer">
                     <div class="widget-content-wrapper">
@@ -67,7 +67,7 @@
         </div>
     </div>
     <div class="col-md-6 col-lg-3">
-        <div class="card-shadow-success mb-3 widget-chart widget-chart2 text-left card">
+        <div class="card-success mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">
                 <div class="widget-content-outer">
                     <div class="widget-content-wrapper">
@@ -89,8 +89,194 @@
     </div>
   </div>
   <!--END:: SECTION CARD PERCENTAGE-->
-  <!--START:: CARD-->
+ 
+  <!--START:: SECTION TABS NAV-->
+  <!-- <div class="row">
+    <div class="col-lg-12">
+      <div class="main-card mb-3 card">
+        <div class="header__pane ml-auto">
+            <div>
+                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-hamburger">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>  
+        <div class="card-header">
+            <ul class="nav nav-justified">
+                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-0" class="active nav-link">All </a></li>
+                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-1" class="nav-link">Drivings</a></li>
+                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-2" class="nav-link">Parked</a></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab-eg7-0" role="tabpanel">
+                  <p>
+                  <tbody>
+                    
+                  </tbody>
+                  </p>
+                </div>
+
+                <div class="tab-pane" id="tab-eg7-1" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                    essentially unchanged. </p></div>
+
+                <div class="tab-pane" id="tab-eg7-2" role="tabpanel"><p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                    type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p></div>
+
+                <div class="tab-pane" id="tab-eg7-3" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                  essentially unchanged. </p></div>
+
+                <div class="tab-pane" id="tab-eg7-4" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                  essentially unchanged. </p></div>
+
+                <div class="tab-pane" id="tab-eg7-5" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                  essentially unchanged. </p></div>
+            </div>
+
+            
+            <table class = "table table-striped table-bordered" style="width:100%">
+                lolola lalala
+            </table>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!--END:: SECTION TABS NAV-->
+
+  <!--START:: CARD2-->
   <div class="row">
+    <div class="col-md-6 col-xl-4">
+      <div class="card mb-3 widget-content bg-midnight">
+          <div class="widget-content-wrapper text-black">
+          <div class="widget-content-outer">
+            <p style="color:#F7464A; font-size:36px; font:Arial"> | 
+                <h5 style="margin-top:-60px; margin-left: 10px">Trips Perfomence</h5> </br>
+                <h6 style="margin-top: -30px; margin-left:10px">Driving Policy Violations</h6>
+            </p>
+
+            <div class="progress" style="margin-top:15px">
+                <div class="progress-bar  bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 5%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+                </br></br> 
+                    <tr>
+                        <td style="color:orange; font-size:14px"> 
+                            40% / 158
+                            <p> Live Trips</p>
+                        </td>
+                        
+                        <td style="color:green; font-size:14px">
+                            20% / 158
+                            <p>Completed</p></td>
+                    </tr>
+                            
+                    <tr>
+                        <td style="color:blue; font-size:14px" >
+                            10% / 158
+                            <p>Being Late</p>
+                        </td> 
+
+                        <td style="color:red, font-size:14px">
+                            5% / 158
+                            <p>Failed</p></td>
+                    </tr>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-xl-8" style="height:90%">
+      <div class="card mb-3 widget-content bg-midnight">
+          <div class="widget-content-wrapper text-yellow">
+                <div class="col-lg-18">
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-hamburger">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner">
+                                    </span>
+                                </span>
+                            </button>
+                            <p style="margin-top: -25px; margin-left:30px; font-size:18px; color:#008a74">Activities Vehicles</p>
+                        </div>
+                    </div>  
+                    <div class="card-header">
+                        <ul class="nav nav-justified">
+                            <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-0" class="active nav-link">All </a></li>
+                            <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-1" class="nav-link">Drivings</a></li>
+                            <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-2" class="nav-link">Parked</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab-eg7-0" role="tabpanel">
+                                <p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                    essentially unchanged. Like Aldus PageMaker including versions of Lorem. Like Aldus PageMaker including versions of Lorem.</p> 
+                                <p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                    essentially unchanged.</p>
+                                <p></p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                essentially unchanged.</p>
+                            </div>
+
+                            <div class="tab-pane" id="tab-eg7-1" role="tabpanel"> <p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                    essentially unchanged. Like Aldus PageMaker including versions of Lorem. Like Aldus PageMaker including versions of Lorem.</p> 
+                                <p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                    essentially unchanged.</p>
+                                <p></p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                essentially unchanged.</p></div>
+
+                            <div class="tab-pane" id="tab-eg7-2" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                    essentially unchanged. Like Aldus PageMaker including versions of Lorem. Like Aldus PageMaker including versions of Lorem.</p> 
+                                <p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                    essentially unchanged.</p>
+                                <p></p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                essentially unchanged.</p></div>
+                        <table class = "table table-striped table-bordered" style="width:100%">
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+  </div>
+  <!--END:: SECTION CARD2-->
+
+
+  <!--START:: SECTION CHARTJS-->
+  <div class="row">
+    <div class="col-md-6">
+        <div class="main-card mb-3 card">
+            <div class="card-body">
+                <h5 class="card-title">Pie Chart</h5>
+                <canvas id="chart-area"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="main-card mb-3 card">
+          <div class="card-body">
+              <h5 class="card-title">Line Chart</h5>
+              <div style="height: 208px">
+                  <canvas id="line-chart"></canvas>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!--END:: SECTION CHARTJS-->
+   <!--START:: CARD-->
+   <div class="row">
     <div class="col-md-6 col-xl-4">
       <div class="card mb-3 widget-content bg-midnight-bloom">
           <div class="widget-content-wrapper text-white">
@@ -132,92 +318,7 @@
     </div>
   </div>
   <!--END:: SECTION CARD-->
-  <!--START:: SECTION TABS NAV-->
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="main-card mb-3 card">
-        <div class="card-header">
-            <ul class="nav nav-justified">
-                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-0" class="active nav-link">All views</a></li>
-                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-1" class="nav-link">Assigned vehicles</a></li>
-                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-2" class="nav-link">On route vehicles</a></li>
-                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-3" class="nav-link">Available vehicles</a></li>
-                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-4" class="nav-link"> Broken vehicles</a></li>
-                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-5" class="nav-link"> Out of service</a></li>
-
-            </ul>
-        </div>
-        <div class="card-body">
-            <div class="tab-content">
-                <div class="tab-pane active" id="tab-eg7-0" role="tabpanel">
-                  <p>
-                  <tbody>
-                    
-                  </tbody>
-                  </p>
-                </div>
-
-                <div class="tab-pane" id="tab-eg7-1" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. </p></div>
-
-                <div class="tab-pane" id="tab-eg7-2" role="tabpanel"><p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                    type specimen book. It has
-                    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p></div>
-
-                <div class="tab-pane" id="tab-eg7-3" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                  essentially unchanged. </p></div>
-
-                <div class="tab-pane" id="tab-eg7-4" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                  essentially unchanged. </p></div>
-
-                <div class="tab-pane" id="tab-eg7-5" role="tabpanel"><p>Like Aldus PageMaker including versions of Lorem. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                  essentially unchanged. </p></div>
-            </div>
-
-            
-            <table class = "table table-striped table-bordered" style="width:100%">
-              <thead>
-                <tr>
-                <th scope="col">Vehicle</th>
-                <th scope="col">Position</th>
-                <th scope="col">Immat</th>
-                <th scope="col">Number of tanks</th>
-                <th scope="col">Capacity</th>
-                <th scope="col">Condition</th>
-                <th scope="col">Status</th>
-                <th scope="col">Action</th>
-                </tr>
-              </thead>
-
-              
-            </table>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--END:: SECTION TABS NAV-->
-  <!--START:: SECTION CHARTJS-->
-  <div class="row">
-    <div class="col-md-6">
-        <div class="main-card mb-3 card">
-            <div class="card-body">
-                <h5 class="card-title">Pie Chart</h5>
-                <canvas id="chart-area"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-      <div class="main-card mb-3 card">
-          <div class="card-body">
-              <h5 class="card-title">Line Chart</h5>
-              <div style="height: 208px">
-                  <canvas id="line-chart"></canvas>
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <!--END:: SECTION CHARTJS-->
+  
   <!--START:: TABLE-->
   <div class="row">
       <div class="col-md-12">

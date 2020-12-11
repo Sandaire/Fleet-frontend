@@ -40,7 +40,7 @@
                                     <a href="{{ route('home') }}" class="active">
                                         <img style="width:40px" src="{{ asset('images/logo_national.png') }}">
                                     </a>
-                                    <a href="#/sodigaz">
+                                    <a href="#/sodigaz" style="margin-top: -40px; margin-left: 60px">
                                         <img style="width:150px" src="{{ asset('images/logo_sodigaz.png') }}">
                                     </a>
                                 </li>

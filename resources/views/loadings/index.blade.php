@@ -46,11 +46,11 @@
 								</tr>
 							  </thead>
 							 
-							  <tbody>
+							  <tbody style="border-style: none none none groove; border-color:#B0C4DE; background-color:#F0F8FF;font-family:Arial;">
 								  @foreach($loadings as $loading)
 									
 									<tr>
-									  <td><a href="{{ route('loading.loadings.show', $loading->id)}}">{{ $loading->id }}</a> </td>
+									  <td ><a href="{{ route('loading.loadings.show', $loading->id)}}">{{ $loading->id }}</a> </td>
 									  <td>
 											@foreach($vehicles as $vehicle)
 												@if($vehicle->id == $loading->vehicle_id)

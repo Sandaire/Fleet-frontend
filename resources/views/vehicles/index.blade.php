@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-				  @section('panel')
+ @section('panel')
 
 <!--START:: SECTION TABS NAV-->
   <div class="row">
@@ -55,8 +55,8 @@
 					<a class="dropdown-item" href="#">Aviation</a>
 				</div>
 			</div>
-			<div class="btn-group btn btn-outline-success" style="font-size:large;margin-left:30px">
-				<button class="btn btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<div class="btn-group btn btn-outline-success" style="font-size:large; float: right">
+				<button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Clear
 				</button>
 			</div>
@@ -94,4 +94,4 @@
   <!--END:: SECTION TABS NAV-->
 
 				   		
-					  @endsection
+@endsection

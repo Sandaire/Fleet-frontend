@@ -80,8 +80,8 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Fleet DINASA
+                <div class="title m-b-md" style="color: #008a74;">
+                   Welcome to DASHBOARD Fleet DINASA
                 </div>
 
                <!-- <div class="links">

@@ -3,7 +3,12 @@
 				  @section('panel')
 					<!-- Content -->
 					  <div class="column content">
-						<a href="{{ route('admin.users.create') }}"><button type="button" class="btn btn-primary" float-right> + New user</button></a>
+						<a href="{{ route('admin.users.create') }}">
+							<button type="button" class="btn btn-warning" style="color:#ffffff; font-size: 17px; font-family: arial"> 
+							<i class="fa fa-plus" aria-hidden="true" title="Copy to use plus"> </i>
+							New user 
+							</button>
+						</a>
 
 							<div class="card-body">
 							
@@ -18,14 +23,19 @@
 							  </thead>
 							  <tbody>
 								  @foreach($users as $user)
-									
-									<tr>
+								  
+									 <tr style="background-color:#F0F8FF; border-style: none none none groove; border-color:#B0C4DE">
 									  <td><a href="{{ route('admin.users.show', $user->id)}}">{{ $user->name }}</a> </td>
 									  <td>{{ $user->email }} </td>
 									  <td>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }} </td>
-									  <td>
+									  <td></br>
 									  @can('edit-users')
-										<a href="{{ route('admin.users.edit', $user->id)}}"><button class="btn btn-primary" style ="float:left">Edit</button></a>
+										<a href="{{ route('admin.users.edit', $user->id)}}">
+											<button type="submit" class="mb-2 mr-2 border-0 btn-transition btn btn-outline-warning" style ="float:left">
+												<i class="fa fa-fw" aria-hidden="true" title="Copy to use pencil-square-o">
+													</i>
+											</button>
+										</a>
 									  @endcan
 									  
 									  
@@ -33,7 +43,11 @@
 									  <form action ="{{ route('admin.users.destroy', $user)}}" method = "POST" class="" >
 										@csrf
 										{{ method_field('DELETE') }}
-										<button type="submit" class="btn btn-danger">Delete</button> </td>
+										<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger">
+											<i class="fa fa-fw" aria-hidden="true" title="Copy to use trash">
+												</i>
+										</button>
+									 </td>
 									  </form>
 									  @endcan
 									 

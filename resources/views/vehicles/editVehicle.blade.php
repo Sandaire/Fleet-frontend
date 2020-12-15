@@ -15,7 +15,8 @@
 							@csrf
 						
 							@method('PUT')
-							<div class="" style="display: flex;">
+							
+							<div class="col" style="display: flex;">
 									<div class="form-group row" style=" ">
 										<label for="brand" class="col-md-4 col-form-label text-md-right">{{ __('Brand') }}</label>
 
@@ -45,9 +46,9 @@
 									</div>
 									</div>
 
-								<div class="" style="display: flex">	
+								<div class="col" style="display: flex">	
 									<div class="form-group row">
-										<label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
+										<label for="code" class="col-md-4 col-form-label text-md-right" style="width:750px">{{ __('Code') }}</label>
 
 										<div class="col-md-6">
 											<input id="code" type="code" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ $vehicle->code }}" required autocomplete="code">
@@ -61,7 +62,7 @@
 									</div>
 								
 									<div class="form-group row">
-										<label for="immat" class="col-md-4 col-form-label text-md-right">{{ __('Immatricule') }}</label>
+										<label for="immat" class="col-md-4 col-form-label text-md-right" style="margin-left:50px; width:750px">{{ __('Immatricule') }}</label>
 
 										<div class="col-md-6">
 											<input id="immat" type="text" class="form-control @error('immat') is-invalid @enderror" name="immat" value = "{{ $vehicle->immat }}"required autocomplete="immat">
@@ -75,7 +76,7 @@
 									</div>
 								</div>
 
-								<div class="" style="display: flex">
+								<div class="col" style="display: flex; margin-left:35px">
 									<div class="form-group row">
 										<label for="year" class="col-md-4 col-form-label text-md-right">{{ __('Year') }}</label>
 
@@ -105,7 +106,7 @@
 									</div>
 								</div>	
 
-								<div class="" style="display: flex">
+								<div class="col" style="display: flex">
 									<div class="form-group row">
 										<label for="odometer" class="col-md-4 col-form-label text-md-right">{{ __('odometer') }}</label>
 
@@ -134,7 +135,7 @@
 										</div>
 									</div>
 								</div>	
-								<div class="" style="display: flex">	
+								<div class="col" style="display: flex">	
 									<div class="form-group row">
 										<label for="n_citerne" class="col-md-4 col-form-label text-md-right">{{ __('Citerne') }}</label>
 
@@ -162,8 +163,8 @@
 											@enderror
 										</div>
 									</div>
-			</div>	
-									
+								</div>	
+								<div class="col ml-3" style="display: flex;">	
 									<div class="form-group row">
 										<label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
 
@@ -247,7 +248,7 @@
 											@enderror
 										</div>
 									</div>
-									
+									</div>
 									<div class="form-group row mb-0">
 										<div class="col-md-6 offset-md-4">
 											<button type="submit" class="btn btn-primary">
@@ -258,6 +259,7 @@
 											</button>
 										</div>
 									</div>
+
 								</form>
 						
 						<!-- </div>

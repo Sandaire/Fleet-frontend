@@ -2,15 +2,21 @@
 
 				  @section('panel')
 					<!-- Content -->
-					  <div class="column content">						
+					<div class="row">
+    <div class="col">
+      <div class="card mb-3 widget-content bg-midnight">
+          <div class="widget-content-wrapper text-black">
+          <div class="widget-content-outer">
+
+					  <!-- <div class="column content">						
 							<div class="card-body">
-							
-							<form action="{{ route('vehicle.vehicles.update', $vehicle)}}" method="POST">
+							 -->
+							<form action="{{ route('vehicle.vehicles.update', $vehicle)}}" method="POST" >
 							@csrf
 						
 							@method('PUT')
-						
-									<div class="form-group row">
+							<div class="" style="display: flex;">
+									<div class="form-group row" style=" ">
 										<label for="brand" class="col-md-4 col-form-label text-md-right">{{ __('Brand') }}</label>
 
 										<div class="col-md-6">
@@ -37,7 +43,9 @@
 											@enderror
 										</div>
 									</div>
+									</div>
 
+								<div class="" style="display: flex">	
 									<div class="form-group row">
 										<label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
 
@@ -51,7 +59,7 @@
 											@enderror
 										</div>
 									</div>
-
+								
 									<div class="form-group row">
 										<label for="immat" class="col-md-4 col-form-label text-md-right">{{ __('Immatricule') }}</label>
 
@@ -65,7 +73,9 @@
 											@enderror
 										</div>
 									</div>
+								</div>
 
+								<div class="" style="display: flex">
 									<div class="form-group row">
 										<label for="year" class="col-md-4 col-form-label text-md-right">{{ __('Year') }}</label>
 
@@ -79,7 +89,7 @@
 											@enderror
 										</div>
 									</div>
-									
+	
 									<div class="form-group row">
 										<label for="vin" class="col-md-4 col-form-label text-md-right">{{ __('Vin') }}</label>
 
@@ -93,6 +103,9 @@
 											@enderror
 										</div>
 									</div>
+								</div>	
+
+								<div class="" style="display: flex">
 									<div class="form-group row">
 										<label for="odometer" class="col-md-4 col-form-label text-md-right">{{ __('odometer') }}</label>
 
@@ -120,7 +133,8 @@
 											@enderror
 										</div>
 									</div>
-									
+								</div>	
+								<div class="" style="display: flex">	
 									<div class="form-group row">
 										<label for="n_citerne" class="col-md-4 col-form-label text-md-right">{{ __('Citerne') }}</label>
 
@@ -148,7 +162,7 @@
 											@enderror
 										</div>
 									</div>
-									
+			</div>	
 									
 									<div class="form-group row">
 										<label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
@@ -246,7 +260,9 @@
 									</div>
 								</form>
 						
-						</div>
-					  </div> <!-- end content -->
+						<!-- </div>
+					  </div>  -->
+					  
+					  </div></div></div></div> <!-- end content -->
 				
 @endsection

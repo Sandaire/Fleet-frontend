@@ -25,7 +25,10 @@
 								  @foreach($users as $user)
 								  
 									 <tr style="background-color:#F0F8FF; border-style: none none none groove; border-color:#B0C4DE">
-									  <td><a href="{{ route('admin.users.show', $user->id)}}">{{ $user->name }}</a> </td>
+									  <td>
+									  <i class="fa fa-user-circle fa-2x" aria-hidden="true" title="Copy to use user-circle"> </i>	  
+									  <a href="{{ route('admin.users.show', $user->id)}}">
+									  	{{ $user->name }}</a> </td>
 									  <td>{{ $user->email }} </td>
 									  <td>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }} </td>
 									  <td></br>

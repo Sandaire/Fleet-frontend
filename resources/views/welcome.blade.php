@@ -8,6 +8,10 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/dist/jstable.css">
+        <link rel="stylesheet" type="text/css" href="/dist/polyfill-babel.min.js">
+        <link rel="stylesheet" type="text/css" href="/dist/polyfill-fetch.min.js">
+        <link rel="stylesheet" type="text/css" href="/dist/polyfill-promise.min.js">
 
         <!-- Styles -->
         <style>
@@ -97,4 +101,5 @@
             </div>
         </div>
     </body>
+    <script type="text/javascript" src="/dist/jstable.min.js"></script>
 </html>

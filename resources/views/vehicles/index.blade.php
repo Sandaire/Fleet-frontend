@@ -18,7 +18,7 @@
             </ul>
 		</div>
         <div class="card-body" >
-			<div class="btn-group btn btn-outline-success" style="font-size:large; height:40px; width:240px"> 
+			<div class="btn-group btn btn-outline-success" style="font-size:large; height:40px; width:240px;color:#ffffff; font-size: 17px; font-family: arial"> 
 				<button class="btn btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					All Vehicles
 				</button>

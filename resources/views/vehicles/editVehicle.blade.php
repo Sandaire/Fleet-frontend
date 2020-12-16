@@ -209,20 +209,6 @@
 									</div>
 									
 									<div class="form-group row">
-										<!-- <label for="condition" class="col-md-6 col-form-label text-md-right">{{ __('Condition') }}</label>
-
-										<div class="col-md-6">
-											<select name="is_new" id="is_new" >
-											  <option value=1 >Brand new</option>
-											  <option value=0 >Used</option>
-											</select>
-											@error('is_new')
-												<span class="invalid-feedback" role="alert">
-													<strong>{{ $message }}</strong>
-												</span>
-											@enderror
-										</div> -->
-
 										<div class="form-group col-md-4">
 											<label for="condition">{{ __('Condition') }}</label>
 											<select id="is_new" class="form-control"  name="is_new">
@@ -239,17 +225,6 @@
 									
 									
 									<div class="form-group row">
-										<!-- <label for="companies" class="col-md-6 col-form-label text-md-right">Fleet company</label>
-										<div class="col-md-6">
-											
-												<div class="form-select">
-													<select name="company" id= "company">
-													  @foreach($company as $cmp)
-														<option name="" value="{{ $cmp->id }}">{{ $cmp->name }}</option>
-													 @endforeach
-													</select>
-												</div>
-										</div> -->
 										<div class="form-group col-md-4">
 										<label for="companies">Fleet company</label>
 										<select id="companies" class="form-control"  name="company">
@@ -260,23 +235,6 @@
 									</div>
 									</div>
 									<div class="form-group row">
-										<!-- <label for="affiliate" class="col-md-4 col-form-label text-md-right">{{ __('Affiliate to') }}</label>
-										
-										<div class="col-md-6">
-												<select name="affiliate" id="affiliate" >
-												  <option value="{{ $vehicle->affiliate }}" @if($vehicle->affiliate == 'DINASA')  {{'SELECTED'}} @endif >DINASA</option>
-												  <option value="{{ $vehicle->affiliate }}" @if($vehicle->affiliate == 'SODIGAZ') {{'SELECTED'}} @endif>SODIGAZ</option>
-												  <option value="{{ $vehicle->affiliate }}" @if($vehicle->affiliate == 'AVIATION'){{'SELECTED'}} @endif>AVIATION</option>
-												</select>
-											
-											@error('affiliate')
-												<span class="invalid-feedback" role="alert">
-													<strong>{{ $message }}</strong>
-												</span>
-											@enderror
-										</div>
-									</div> -->
-									
 									<div class="form-group col-md-4">
 										<label for="affiliate">{{ __('Affiliate to') }}</label>
 										<select id="affiliate" class="form-control"  name="affiliate">
@@ -290,23 +248,7 @@
 												</span>
 											@enderror
 									</div>
-									<!-- <div class="form-group row">
-										<label for="status" class="col-md-4 col-form-label text-md-right">{{ __('Status') }}</label>
-
-										<div class="col-md-6">
-										 <select name="status" id="status">
-											  
-											  <option value="{{ $vehicle->status }}">{{ $vehicle->status }}</option>
-											  <option value="Unoccupied">Unoccupied</option>
-											  <option value="Out of service">Out of service</option>
-											</select>
-											@error('terminal')
-												<span class="invalid-feedback" role="alert">
-													<strong>{{ $message }}</strong>
-												</span>
-											@enderror
-										</div>
-									</div> -->
+									
 									<div class="form-group col-md-4">
 										<label for="inputState">{{ __('Status') }}</label>
 										<select id="inputState" class="form-control"  name="status">

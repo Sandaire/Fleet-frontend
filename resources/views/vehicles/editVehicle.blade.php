@@ -2,7 +2,7 @@
 
 				  @section('panel')
 					<!-- Content -->
-					<div class="row">
+<div class="row">
     <div class="col">
       <div class="card mb-3 widget-content bg-midnight">
           <div class="widget-content-wrapper text-black">
@@ -48,7 +48,7 @@
 
 								<div class="col" style="display: flex">	
 									<div class="form-group row">
-										<label for="code" class="col-md-4 col-form-label text-md-right" style="width:750px">{{ __('Code') }}</label>
+										<label for="code" class="col-md-2 col-form-label text-md-right" style="width:750px">{{ __('Code') }}</label>
 
 										<div class="col-md-6">
 											<input id="code" type="code" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ $vehicle->code }}" required autocomplete="code">
@@ -62,7 +62,7 @@
 									</div>
 								
 									<div class="form-group row">
-										<label for="immat" class="col-md-4 col-form-label text-md-right" style="margin-left:50px; width:750px">{{ __('Immatricule') }}</label>
+										<label for="immat" class="col-md-6 col-form-label text-md-right">{{ __('Immatricule') }}</label>
 
 										<div class="col-md-6">
 											<input id="immat" type="text" class="form-control @error('immat') is-invalid @enderror" name="immat" value = "{{ $vehicle->immat }}"required autocomplete="immat">

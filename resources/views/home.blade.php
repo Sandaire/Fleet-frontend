@@ -13,6 +13,16 @@ var dt = require( 'datatables.net' )();
 
 </script>
 @section('panel')
+<!-- <main class="main">
+    
+<header class="main">
+      <h5>Hello <a href="#">James</a>! Check out your latest stats.</h5>
+      <form class="input-container">
+         <label>Search</label>
+         <input type="search">
+      </form>
+   </header>
+</main> -->
   <!--START:: SECTION CARD PERCENTAGE-->
   <div class="row">
     <div class="col-md-6 col-lg-3">

@@ -2,6 +2,7 @@
             <div class="app-header__logo">
                 <div class="logo-src">
                     <a class="navbar-brand" href="{{ url('/') }}" >
+                    <i class="fa fa-ellipsis-v fa-w-6" style="background-color: #008a74;"></i>
                         <!-- <img style="width:60px; height:50px; margin-top: -20px; box-shadow: 2px 2px 13px white;" src="{{ asset('images/dinasa_Logo.png') }}"> -->
                     </a>
                 </div>
@@ -28,7 +29,7 @@
                 <span>
                     <button type="button" class="btn-icon btn-icon-only btn btn-warning btn-sm mobile-toggle-header-nav">
                         <span class="btn-icon-wrapper">
-                            <i class="fa fa-ellipsis-v fa-w-6" style="background-color: #008a74;"></i>
+                        <i class="fa fa-user-circle fa-2x" aria-hidden="true" title="Copy to use user-circle"> </i>
                         </span>
                     </button>
                 </span>

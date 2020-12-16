@@ -194,12 +194,11 @@
 
 										<div class="form-group col-md-4">
 											<label for="type">{{ __('Type') }}</label>
-											<select name="type" id="type" required>
-											  <option value="Truck" >Truck</option>
+											<select id="type" class="form-control"  name="type" required>
+											<option value="Truck" >Truck</option>
 											  <option value="Car" >Car</option>
 											  <option value="Bus" >Bus</option>
 											</select>
-											
 											@error('type')
 												<span class="invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>

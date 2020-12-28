@@ -14,7 +14,7 @@ var dt = require( 'datatables.net' )();
 </script>
 <!--  -->
 
-@section('panel')
+@section('content')
 
 
 
@@ -29,14 +29,115 @@ var dt = require( 'datatables.net' )();
    </header>
 </main> -->
   <!--START:: SECTION CARD PERCENTAGE-->
+  <div class="card-header">Overview</div> </br>
+
+  <div class="content row"><a href="/admin/users">
+    <div class="col-md-6 col-xl-3" style="margin-left:5px">
+      <div class="card mb-3 widget-content bg-bloom" style="background:orange">
+          <div class="widget-content-wrapper text-white">
+              <div class="widget-content-left">
+                  <div class="widget-heading">Total All Users</div>
+                  <div class="widget-subheading">All User systems</div>
+              </div>
+              <div class="widget-content-right">
+                  <div class="widget-numbers text-white"><span>7</span></div>
+              </div>
+          </div>
+      </div></a>
+    </div>
+    <div class="col-md-6 col-xl-3"><a href="/loading/loadings">
+      <div class="card mb-3 widget-content bg-bloom" style="background:#C6C3C3">
+          <div class="widget-content-wrapper text-white">
+              <div class="widget-content-left">
+                  <div class="widget-heading">Total Loading List</div>
+                  <div class="widget-subheading">All Loading List</div>
+              </div>
+              <div class="widget-content-right">
+                  <div class="widget-numbers text-white"><span>19</span></div>
+              </div>
+          </div>
+      </div></a>
+    </div>
+    <div class="col-md-6 col-xl-3"><a href="/delivery/deliveries">
+      <div class="card mb-3 widget-content bg-bloom" style="background:#008a74">
+          <div class="widget-content-wrapper text-white">
+              <div class="widget-content-left">
+                  <div class="widget-heading">Total Shipments </div>
+                  <div class="widget-subheading">All Shipments </div>
+              </div>
+              <div class="widget-content-right">
+                  <div class="widget-numbers text-white"><span>28</span></div>
+              </div>
+          </div>
+      </div></a>
+    </div>
+
+	<div class="col-md-6 col-xl-3" style="margin-left:-5px">
+    <a href="/vehicle/vehicles">
+      <div class="card mb-3 widget-content bg-bloom" style="background:#0383FF">
+          <div class="widget-content-wrapper text-white">
+              <div class="widget-content-left">
+                  <div class="widget-heading">Total Fleets Vehicles</div>
+                  <div class="widget-subheading">All fleets vehicles </div>
+              </div>
+              <div class="widget-content-right">
+                  <div class="widget-numbers text-white"><span>134</span></div>
+              </div>
+          </div>
+      </div></a>
+    </div>
+  </div>
+<!--START:: SECTION CHARTJS-->
+<div class="row">
+                                            <div class="col-md-6" style="margin-left:5px">
+                                                <div class="main-card mb-3 card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Total Vehicles</h5>
+                                                        <canvas id="chart-area"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6" style="margin-left:-5px">
+                                            <div class="main-card mb-3 card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Trips Performance</h5>
+                                                    <div style="height: 208px">
+                                                        <canvas id="line-chart"></canvas>
+                                                    </div>
+                                                    <tr>
+                                                        <td style="color:orange; font-size:14px"> 
+                                                            40% / 158
+                                                            <p> Live Trips</p>
+                                                        </td>
+                                                        
+                                                        <td style="color:green; font-size:14px">
+                                                            20% / 158
+                                                            <p>Completed</p></td>
+                                                    </tr>
+<!--                                                             
+                                                    <tr>
+                                                        <td style="color:blue; font-size:14px" >
+                                                            10% / 158
+                                                            <p>Being Late</p>
+                                                        </td> 
+
+                                                        <td style="color:red, font-size:14px">
+                                                            5% / 158
+                                                            <p>Failed</p></td>
+                                                    </tr> -->
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </br>
   <div class="row">
-    <div class="col-md-6 col-lg-3">
+    <div class="col-md-6 col-lg-3" style="margin-left:5px">
         <div class="card-info mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">
                 <div class="widget-content-outer">
                     <div class="widget-content-wrapper">
                         <div class="widget-content-left pr-2 fsize-1">
-                            <div class="widget-numbers mt-0 fsize-3 text-info">71%</div>
+                            <div class="widget-numbers mt-0 fsize-3 text-info" >71%</div>
                         </div>
                         <div class="widget-content-right w-100">
                             <div class="progress-bar-xs progress">
@@ -93,7 +194,7 @@ var dt = require( 'datatables.net' )();
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-3">
+    <div class="col-md-6 col-lg-3" style="margin-left:-5px">
         <div class="card-success mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">
                 <div class="widget-content-outer">
@@ -115,6 +216,7 @@ var dt = require( 'datatables.net' )();
         </div>
     </div>
   </div>
+    <!--END:: SECTION CARD2-->
   <!--END:: SECTION CARD PERCENTAGE-->
   
   <!--START:: SECTION TABS NAV-->
@@ -174,49 +276,78 @@ var dt = require( 'datatables.net' )();
   </div> -->
   <!--END:: SECTION TABS NAV-->
 
-  <!--START:: CARD2-->
-  <div class="row">
+                                      
+   
+   <!--START:: CARD2-->
+   <div class="row">
     <div class="col-md-6 col-xl-4">
-      <div class="card mb-3 widget-content bg-midnight">
-          <div class="widget-content-wrapper text-black">
-          <div class="widget-content-outer">
-            <p style="color:#F7464A; font-size:36px; font:Arial"> | 
-                <h5 style="margin-top:-60px; margin-left: 10px">Trips Perfomence</h5> </br>
-                <h6 style="margin-top: -30px; margin-left:10px">Driving Policy Violations</h6>
-            </p>
+      <div class="card mb-3 widget-content bg-midnight" style="margin-left:5px">
+      
+        <div class="widget-content-wrapper text-black">
+        <div class="wrapper col-2">
+        <style>
+            .chartjs-size-monitor, .chartjs-size-monitor-expand, .chartjs-size-monitor-shrink {
+            position: absolute;
+            direction: ltr;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: -1;
+        }
+        </style>
+        <div class="chartjs-size-monitor">
+        <div class="chartjs-size-monitor-expand"><div class=""></div>
+        </div><div class="chartjs-size-monitor-shrink">
+        <div class="">
+        </div>
+        </div>
+        </div>
+            <canvas id="chart-0" width="490" height="320" class="chartjs-render-monitor" style="display: block; height: 256px; width: 392px;">
+            </canvas>
+        </div>
+             <!-- <div class="widget-content-outer">
+                <p style="color:#F7464A; font-size:36px; font:Arial"> | 
+                    <h5 style="margin-top:-60px; margin-left: 10px">Trips Perfomence</h5> </br>
+                    <h6 style="margin-top: -30px; margin-left:10px">Driving Policy Violations</h6>
+                </p>
 
-            <div class="progress" style="margin-top:15px">
-                <div class="progress-bar  bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 5%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-                </br></br> 
-                    <tr>
-                        <td style="color:orange; font-size:14px"> 
-                            40% / 158
-                            <p> Live Trips</p>
-                        </td>
-                        
-                        <td style="color:green; font-size:14px">
-                            20% / 158
-                            <p>Completed</p></td>
-                    </tr>
+                <div class="progress" style="margin-top:15px">
+                    <div class="progress-bar  bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 5%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                    </br></br> 
+                        <tr>
+                            <td style="color:orange; font-size:14px"> 
+                                40% / 158
+                                <p> Live Trips</p>
+                            </td>
                             
-                    <tr>
-                        <td style="color:blue; font-size:14px" >
-                            10% / 158
-                            <p>Being Late</p>
-                        </td> 
+                            <td style="color:green; font-size:14px">
+                                20% / 158
+                                <p>Completed</p></td>
+                        </tr>
+                                
+                        <tr>
+                            <td style="color:blue; font-size:14px" >
+                                10% / 158
+                                <p>Being Late</p>
+                            </td> 
 
-                        <td style="color:red, font-size:14px">
-                            5% / 158
-                            <p>Failed</p></td>
-                    </tr>
-            </div>
+                            <td style="color:red, font-size:14px">
+                                5% / 158
+                                <p>Failed</p></td>
+                        </tr>
+              </div> -->
           </div>
       </div>
     </div>
+    
 
     <div class="col-md-8 col-xl-8" style="height:90%">
       <div class="card mb-3 widget-content bg-midnight">
@@ -581,239 +712,11 @@ var dt = require( 'datatables.net' )();
         </div>
         
     </div>
-    <!--END:: SECTION CARD2-->
-
-
-                                        <!--START:: SECTION CHARTJS-->
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="main-card mb-3 card">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Total Vehicles</h5>
-                                                        <canvas id="chart-area"></canvas>
-                                                        <div class="" style="margin-top:-200px; float:right">
-                                                        <p style="color:#008a74; font-size:36px; font:Arial"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">On Route </h6> </p>
-                                                        <p style="color:#FDB45C; font-size:36px; font:Arial"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">Available </h6> </p>
-                                                        <p style="color:#F7464A; font-size:36px; font:Arial;"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">Out of service </h6> </p></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                            <div class="main-card mb-3 card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Trips Performance</h5>
-                                                    <div style="height: 208px">
-                                                        <canvas id="line-chart"></canvas>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        <!--END:: SECTION CHARTJS-->
-                                        <!-- START Pagination -->
-                                        <!-- Table with panel -->
-                                        <!-- <div class="card card-cascade narrower">
-
-                                        <!--Card image-->
-                                        <!-- <div class="view view-cascade warning-card-header yellow-warning narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center"> -->
-
-                                            <!-- <div>
-                                            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                                                <i class="fas fa-th-large mt-0"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                                                <i class="fas fa-columns mt-0"></i>
-                                            </button>
-                                            </div>
-
-                                            <a href="" class="white-text mx-3">Table name</a>
-
-                                            <div>
-                                            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                                                <i class="fas fa-pencil-alt mt-0"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                                                <i class="far fa-trash-alt mt-0"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                                                <i class="fas fa-info-circle mt-0"></i>
-                                            </button>
-                                            </div>
-
-                                        </div> -->
-                                        <!--/Card image-->
-
-                                        <!-- <div class="px-4">
-
-                                            <div class="table-wrapper"> -->
-                                            <!--Table-->
-                                            <!-- <table class="table table-hover mb-0"> -->
-
-                                                <!--Table head-->
-                                                <!-- <thead>
-                                                <tr>
-                                                    <th>
-                                                    <input class="form-check-input" type="checkbox" id="checkbox">
-                                                    <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
-                                                    </th>
-                                                    <th class="th-lg">
-                                                    <a>First Name
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                    </a>
-                                                    </th>
-                                                    <th class="th-lg">
-                                                    <a href="">Last Name
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                    </a>
-                                                    </th>
-                                                    <th class="th-lg">
-                                                    <a href="">Username
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                    </a>
-                                                    </th>
-                                                    <th class="th-lg">
-                                                    <a href="">Username
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                    </a>
-                                                    </th>
-                                                    <th class="th-lg">
-                                                    <a href="">Username
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                    </a>
-                                                    </th>
-                                                    <th class="th-lg">
-                                                    <a href="">Username
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                    </a>
-                                                    </th>
-                                                </tr>
-                                                </thead> -->
-                                                <!--Table head-->
-
-                                                <!--Table body-->
-                                                <!-- <tbody>
-                                                <tr>
-                                                    <th scope="row">
-                                                    <input class="form-check-input" type="checkbox" id="checkbox1">
-                                                    <label class="form-check-label" for="checkbox1" class="label-table"></label>
-                                                    </th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                    <input class="form-check-input" type="checkbox" id="checkbox2">
-                                                    <label class="form-check-label" for="checkbox2" class="label-table"></label>
-                                                    </th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                    <input class="form-check-input" type="checkbox" id="checkbox3">
-                                                    <label class="form-check-label" for="checkbox3" class="label-table"></label>
-                                                    </th>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                    <input class="form-check-input" type="checkbox" id="checkbox4">
-                                                    <label class="form-check-label" for="checkbox4" class="label-table"></label>
-                                                    </th>
-                                                    <td>Paul</td>
-                                                    <td>Topolski</td>
-                                                    <td>@P_Topolski</td>
-                                                    <td>Paul</td>
-                                                    <td>Topolski</td>
-                                                    <td>@P_Topolski</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                    <input class="form-check-input" type="checkbox" id="checkbox5">
-                                                    <label class="form-check-label" for="checkbox5" class="label-table"></label>
-                                                    </th>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                                </tbody>
-                                                Table body
-                                            </table>
-                                            Table-->
-                                            <!-- </div>
-
-                                        </div> -->
-
-                                        <!--</div>  -->
-                                        <!-- Table with panel -->
-                                        <!-- End pagination -->
-                                        </br>
-   <!--START:: CARD-->
-   <div class="row">
-    <div class="col-md-6 col-xl-4">
-      <div class="card mb-3 widget-content bg-midnight-bloom">
-          <div class="widget-content-wrapper text-white">
-              <div class="widget-content-left">
-                  <div class="widget-heading">Total Orders</div>
-                  <div class="widget-subheading">Last year expenses</div>
-              </div>
-              <div class="widget-content-right">
-                  <div class="widget-numbers text-white"><span>1896</span></div>
-              </div>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-xl-4">
-      <div class="card mb-3 widget-content bg-midnight-bloom">
-          <div class="widget-content-wrapper text-white">
-              <div class="widget-content-left">
-                  <div class="widget-heading">Total Orders</div>
-                  <div class="widget-subheading">Last year expenses</div>
-              </div>
-              <div class="widget-content-right">
-                  <div class="widget-numbers text-white"><span>1896</span></div>
-              </div>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-xl-4">
-      <div class="card mb-3 widget-content bg-midnight-bloom">
-          <div class="widget-content-wrapper text-white">
-              <div class="widget-content-left">
-                  <div class="widget-heading">Total Orders</div>
-                  <div class="widget-subheading">Last year expenses</div>
-              </div>
-              <div class="widget-content-right">
-                  <div class="widget-numbers text-white"><span>1896</span></div>
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <!--END:: SECTION CARD-->
-  
+    
+   
   <!--START:: TABLE-->
   <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12" style="margin-left:5px">
           <div class="main-card mb-3 card">
               <div class="card-header">Transports
                   <div class="btn-actions-pane-right">

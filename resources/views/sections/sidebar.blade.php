@@ -1,7 +1,7 @@
 <div class="app-sidebar sidebar-shadow">
                     <div class="app-header__logo">
                         <div class="logo-src">
-                        Fleet Dinasa
+                        
                         </div>
                         <div class="header__pane ml-auto"  >
                             <div>
@@ -40,7 +40,10 @@
                                     <a href="{{ route('home') }}" class="active">
                                         <img style="width:40px" src="{{ asset('images/logo_national.png') }}">
                                     </a>
-                                    <a href="#/sodigaz" style="margin-top: -40px; margin-left: 60px">
+                                    
+                                </li>
+                                <li>
+                                    <a href="/sodigaz" style="margin-top: -40px; margin-left: 60px">
                                         <img style="width:150px" src="{{ asset('images/logo_sodigaz.png') }}">
                                     </a>
                                 </li>
@@ -49,13 +52,13 @@
                                     <a href="{{ route('vehicle.vehicles.index') }}" style="color: #008a74;" >
                                     <i class="fa fa-bus" aria-hidden="true" title="Copy to use bus"> </i>
                                         My fleet
-                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                        <!-- <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i> -->
                                     </a>
-                                    <a href="#" >
+                                    <!-- <a href="#" >
                                     <i class="fa fa-truck" aria-hidden="true" title="Copy to use truck" style="color: #008a74;"> </i>
                                         Unoccupied vehicles
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                    </a>
+                                    </a> -->
                                 </li>
                                 @can('manage-users')
                                 <li class="app-sidebar__heading" style="color: #008a74;">Loading order</li>
@@ -84,19 +87,19 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#/location">
+                                        <a href="#{{ route('home') }}">
                                         <i class="fa fa-map" aria-hidden="true" title="Copy to use map" style="color: #008a74;"> </i>
                                             </i>Location
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ route('home') }}">
                                         <i class="fa fa-tags" aria-hidden="true" title="Copy to use tags" style="color: #008a74;"> </i>
                                             </i>Roles
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ route('home') }}">
                                         <i class="fa fa-bus" aria-hidden="true" title="Copy to use bus" style="color: #008a74;"> </i>
                                             </i>Permissions
                                         </a>
@@ -118,13 +121,13 @@
 
                                     <li class="app-sidebar__heading" style="color: #008a74;">Settings</li>
                                     <li>
-                                        <a href="#" target="_blank">
+                                        <a href="{{ route('home') }}" target="_blank">
                                         <i class="fa fa-bus" aria-hidden="true" title="Copy to use bus"> </i>
                                             System
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank">
+                                        <a href="{{ route('home') }}" target="_blank">
                                         <i class="fa fa-settings" aria-hidden="true" title="Copy to use settings"> </i>
                                             Maintenance Planner
                                         </a>

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 	
 });
 
@@ -22,12 +22,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/temp', 'HomeController@temp')->name('temp');
+Route::get('/sodigaz', 'FleetController@sodigaz')->name('sodigaz');
+Route::get('/overview', 'FleetController@overview')->name('overview');
+Route::get('/realtime', 'FleetController@realtime')->name('realtime');
 
-//Route::get('/adminDash','Admin\UsersController@adminDash');
+// //Route::get('/adminDash','Admin\UsersController@adminDash');
 
-/* Route::get('/adminDash',function(){
-	return view('admin.users.adminDash');
-}); */
+//  Route::get('/adminDash',function(){
+// 	return view('admin.users.adminDash');
+// }); 
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
 	Route::resource('/users', 'UsersController');

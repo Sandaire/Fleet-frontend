@@ -150,6 +150,8 @@ Highcharts.chart('container', {
   }]
 });
 
+//monitor Charts
+
 
 
 

@@ -2,7 +2,11 @@
 
 				  @section('panel')
 					<!-- Content -->
-					  <div class="column content">						
+	<div class="col">
+      <div class="card mb-3 widget-content bg-midnight">
+          <div class="widget-content-wrapper text-black">
+          <div class="widget-content-outer">
+					  <div class="column content" style="margin-left:200px">						
 							<div class="card-body">
 							
 							<form  method="POST" action="{{ route('admin.users.update', $user)}}">
@@ -86,19 +90,20 @@
 							<label for="roles" class="col-md-2 col-form-label text-md-right">Roles</label>
 							<div class="col-md-6">
 								@foreach($roles as $role)
-									<div class="form-check">
-										<input type="checkbox" name="roles[]" value="{{ $role->id }}"
+									<div class="form-check-inline" >
+										<input type="radio" name="roles[]" value="{{ $role->id }}"
 										@if($user->roles->pluck('id')->contains($role->id)) checked @endif>								
-										<label>{{ $role->name }}</label>
+										<label style="font-size:16px;margin-top:7px">&nbsp {{ $role->name }}</label>
 									</div>
 								@endforeach
 							</div>
 						</div>
-						<button type="submit" class="btn btn-primary">
+						<button type="submit" class="btn btn-success" style="border-radius:20px; width:550px; ">
 							Update
 						</button>
 					</form>
 						</div>
 					  </div> <!-- end content -->
-				
+					  
+			</div></div></div>
 @endsection

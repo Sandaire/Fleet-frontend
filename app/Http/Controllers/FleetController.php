@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class FleetController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -33,6 +33,22 @@ class HomeController extends Controller
 
     public function sodigaz()
     {
-		return view('sodigaz');
+        return view('fleets.sodigaz');
     }
+
+    public function location()
+    {
+        return view('fleets.location');
+    }
+    
+    public function overview()
+    {
+        return view('fleets.overview');
+    }
+
+    public function realtime()
+    {
+        return view('fleets.realtime');
+    }
+
 }

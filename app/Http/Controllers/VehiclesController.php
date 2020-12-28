@@ -20,6 +20,7 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Exception\RequestException;
+use App\PaginatorResolver;
 
 class VehiclesController extends Controller
 {
@@ -28,20 +29,22 @@ class VehiclesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 		$email = 'ppestime@dinasa.ht';
 		$vehicle = 'Toyota rav4';
 		 
 		//VehiclesController::emailTransporter($email, $vehicle); 
 		//VehiclesController::emailClient($email); 
-		//return 1;
-		
+    //return 1;
+    $page = $request->page ?? 1;
+    // PaginatorResolver::PageResolver($page);
+    
 		$vehicles = Vehicle::all();
-        $companies = Company::all();
-		
+    $companies = Company::all();
+        
 		return view('vehicles.index')->with([
-			'companies' => $companies, 'vehicles' => $vehicles
+			'companies' => $companies, 'vehicles' => $vehicles, 'page'=>$page
 		]); 
     }
 	

@@ -1,10 +1,16 @@
 @extends('layouts.admin')
 
-				  @section('panel')
+				  @section('content')
 					<!-- Content -->
+					
 					  <div class="column content">
-						<a href="{{ route('admin.companies.create') }}"><button class="btn btn-warning" style="color:#ffffff; font-size: 17px; font-family: arial"> 
-							<i class="fa fa-plus" aria-hidden="true" title="Copy to use plus"> </i> New company</button></a>
+						<div class="card-header">
+							<a href="{{ route('admin.companies.create') }}">
+								<button class="btn btn-warning" style="color:#ffffff; font-size: 17px; font-family: arial"> 
+									<i class="fa fa-plus" aria-hidden="true" title="Copy to use plus"> </i> New company
+								</button>
+							</div>
+						</a>
 
 							<div class="card-body">
 							
@@ -21,7 +27,7 @@
 							  <tbody>
 								  @foreach($companies as $company)
 									
-									<tr style="border-style: none none none groove; border-color:#B0C4DE; background-color:#F0F8FF;">
+									<tr style="border-style: none none none groove; border-color:#B0C4DE; background-color:#F0F8FF; border-radius: 100px">
 									  <td>{{ $company->name }} </td>
 									  <td>{{ $company->email }} </td>
 									  <td>{{ $company->contact_name }} </td>

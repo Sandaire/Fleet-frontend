@@ -73,7 +73,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="" style="display: flex;  margin-left:90px">
+								<div class="" style="display: flex;  margin-left:80px">
 									<div class="form-group row">
 										<label for="year" class="col-md-4 col-form-label text-md-right" style="width:450px; margin-left:-50px">{{ __('Year') }}</label>
 
@@ -88,7 +88,7 @@
 										</div>
 									</div>
 									
-									<div class="form-group row">
+									<div class="form-group row" style="margin-left:-70px">
 										<label for="vin" class="col-md-4 col-form-label text-md-right" style="width:450px; margin-left:50px">{{ __('Vin') }}</label>
 
 										<div class="col-md-6">
@@ -161,20 +161,8 @@
 											@enderror
 										</div>
 									</div>
-
-									<div class="form-group col-md-4">
-											<label for="capacity">{{ __('Type') }}</label>
-											<input id="capacity" type="text" class="form-control" name="capacity" value= "{{ $vehicle->capacity }}"  required autocomplete="capacity">
-											
-											@error('capacity')
-												<span class="invalid-feedback" role="alert">
-													<strong>{{ $message }}</strong>
-												</span>
-											@enderror
-										</div>
-								</div>	
-								
-								<div class="" style="display: flex; margin-left: 50px">
+								</div>
+								<!-- <div class="" style="display: flex; margin-left: 50px"> -->
 									<!-- <div class="form-group row">
 										<label for="type" class="col-md-5 col-form-label text-md-right">{{ __('Type') }}</label>
 
@@ -192,48 +180,9 @@
 											@enderror
 										</div> -->
 
-										<div class="form-group col-md-4">
-											<label for="type">{{ __('Type') }}</label>
-											<select id="type" class="form-control"  name="type" required>
-											<option value="Truck" >Truck</option>
-											  <option value="Car" >Car</option>
-											  <option value="Bus" >Bus</option>
-											</select>
-											@error('type')
-												<span class="invalid-feedback" role="alert">
-													<strong>{{ $message }}</strong>
-												</span>
-											@enderror
-										</div>
+										
+									<!-- </div> -->
 
-									</div>
-									
-									<div class="form-group row">
-										<div class="form-group col-md-4">
-											<label for="condition">{{ __('Condition') }}</label>
-											<select id="is_new" class="form-control"  name="is_new">
-												<option value=1 >Brand new</option>
-												<option value=0 >Used</option>
-											</select>
-											@error('is_new')
-												<span class="invalid-feedback" role="alert">
-													<strong>{{ $message }}</strong>
-												</span>
-											@enderror
-										</div>
-									</div>
-									
-									
-									<div class="form-group row">
-										<div class="form-group col-md-4">
-										<label for="companies">Fleet company</label>
-										<select id="companies" class="form-control"  name="company">
-											<@foreach($company as $cmp)
-												<option name="" value="{{ $cmp->id }}">{{ $cmp->name }}</option>
-												@endforeach
-										</select>
-									</div>
-									</div>
 									<div class="form-group row">
 									<div class="form-group col-md-4">
 										<label for="affiliate">{{ __('Affiliate to') }}</label>
@@ -262,14 +211,55 @@
 											</span>
 											@enderror
 									</div>
-							</div>
+
+									<div class="form-group col-md-4">
+											<label for="type">{{ __('Type') }}</label>
+											<select id="type" class="form-control"  name="type" required>
+											<option value="Truck" >Truck</option>
+											  <option value="Car" >Car</option>
+											  <option value="Bus" >Bus</option>
+											</select>
+											@error('type')
+												<span class="invalid-feedback" role="alert">
+													<strong>{{ $message }}</strong>
+												</span>
+											@enderror
+									</div>
+								</div>
+								
+								<div class="form-group row">
+										<div class="form-group col-md-4">
+											<label for="companies">Fleet company</label>
+											<select id="companies" class="form-control"  name="company">
+												<@foreach($company as $cmp)
+													<option name="" value="{{ $cmp->id }}">{{ $cmp->name }}</option>
+													@endforeach
+											</select>
+										</div>
+									
+										<div class="form-group col-md-4">
+											<label for="condition">{{ __('Condition') }}</label>
+											<select id="is_new" class="form-control"  name="is_new">
+												<option value=1 >Brand new</option>
+												<option value=0 >Used</option>
+											</select>
+											@error('is_new')
+												<span class="invalid-feedback" role="alert">
+													<strong>{{ $message }}</strong>
+												</span>
+											@enderror
+										</div>
+									</div>
+									
+
 									<div class="form-group row mb-0">
 										<div class="col-md-6 offset-md-4">
-											<button type="submit" class="btn btn-primary">
+											<button type="submit" class="btn btn-success" style="border-radius:20px; width:200px">
 												{{ 'Update' }}
 											</button>
-											<button type="text" class="btn btn-default">
-												{{ ('Cancel') }}
+											<button class="btn-group btn btn-outline-danger" style="height:40px; color:black; font-size: 20px; font-family: arial; border-radius:100%">
+											<i class="fa fa-times" aria-hidden="true" style="margin-top:3px"></i>
+												<!-- {{ ('Cancel') }} -->
 											</button>
 										</div>
 									</div>

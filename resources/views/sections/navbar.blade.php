@@ -1,13 +1,14 @@
 <div class="app-header header-shadow" style="background-color: #008a74; color: white">
             <div class="app-header__logo">
                 <div class="logo-src">
-                    <a class="navbar-brand" href="{{ url('/') }}" >
+                    <a class="navbar-brand" href="{{ url('/') }}" style="color:white; margin-top:-10px;" >
+                        Management - DINASA
                         <!-- <img style="width:60px; height:50px; margin-top: -20px; box-shadow: 2px 2px 13px white;" src="{{ asset('images/dinasa_Logo.png') }}"> -->
                     </a>
                 </div>
                 <div class="header__pane ml-auto">
                     <div>
-                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic " data-class="closed-sidebar">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>

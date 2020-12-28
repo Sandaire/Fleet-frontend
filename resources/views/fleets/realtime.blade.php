@@ -30,6 +30,7 @@ var dt = require( 'datatables.net' )();
 </main> -->
   <!--START:: SECTION CARD PERCENTAGE-->
   <div class="row">
+  <h3> SODIGAZ</h3>
     <div class="col-md-6 col-lg-3">
         <div class="card-info mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">
@@ -591,13 +592,6 @@ var dt = require( 'datatables.net' )();
                                                     <div class="card-body">
                                                         <h5 class="card-title">Total Vehicles</h5>
                                                         <canvas id="chart-area"></canvas>
-                                                        <div class="" style="margin-top:-200px; float:right">
-                                                        <p style="color:#008a74; font-size:36px; font:Arial"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">On Route </h6> </p>
-                                                        <p style="color:#FDB45C; font-size:36px; font:Arial"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">Available </h6> </p>
-                                                        <p style="color:#F7464A; font-size:36px; font:Arial;"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">Out of service </h6> </p></div>
                                                     </div>
                                                 </div>
                                             </div>

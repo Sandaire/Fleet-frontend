@@ -1,109 +1,56 @@
 @extends('layouts.admin')
-@section('head')
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="refresh" content="60" />
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'FMS') }}</title>
+ @section('content')
+<!--START:: SECTION TABS NAV-->
+<div class="card-header">
+	<div  class="row">
+		<div class="col-lg-12">
+      <h6 style="margin-top:30px"> Loading List</h6>
+		<a href="{{ route('loading.loadings.create') }}">
+      <button type="button" class="btn" style="background-color:#008a74; color: white; font-size:16px; margin-left:1000px; margin-top:-60px">
+      <i class="fa fa-plus" aria-hidden="true" title="Copy to use plus"> </i> Loading order
+      </button>
+    </a>
+    <!-- <a href="('loading.loadings.addDelivery', $loading) " style="color:#008a74" > Advanced search</a>	 -->
+    </div>
+	</div>
+</div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="main-card mb-3 card">
+        <div class="card-header">
+            <ul class="nav nav-justified">
+                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-0" class="active nav-link">All views</a></li>
+                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-1" class="nav-link">Pending</a></li>
+                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-2" class="nav-link">In progress</a></li>
+                <li class="nav-item"><a data-toggle="tab" href="#tab-eg7-3" class="nav-link">Ready for delivery</a></li>
+            </ul>
+		</div>
+        <div class="card-body" >
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+            <div class="tab-content ">
+                <div class="tab-pane active" id="tab-eg7-0" role="tabpanel">
+					@include('tabbar.loadingViewAll')
+                </div>
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-	
-</head>
+                <div class="tab-pane" id="tab-eg7-1" role="tabpanel">
+					@include('tabbar.pendingLoading')
+				</div>
+
+                <div class="tab-pane" id="tab-eg7-2" role="tabpanel">
+					@include('tabbar.inProgressLoading')
+				</div>
+
+                <div class="tab-pane" id="tab-eg7-3" role="tabpanel">
+					@include('tabbar.readyLoading')
+				</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END:: SECTION TABS NAV-->
+
+				   		
 @endsection
-
-				  @section('panel')
-					<!-- Content -->
-					<div class="" style="background-color: #FFFFFF; margin-top:-35px; height:80px;">
-					<a href="('loading.loadings.addDelivery', $loading) " style="float:right; margin-top:20px; font-size:16px; color:#008a74" > Advanced search</a>	
-					<a href="{{ route('loading.loadings.create') }}"><button type="button" class="btn" float-right style="margin-top:20px; background-color:#008a74; color: white; font-size:16px; margin-left:5px"> + Loading order</button></a>
-					</div>
-
-					  <div class="column content">
-							<div class="card-body">
-							
-							<table class = "table">
-							  <thead>
-								<tr>
-								  <th scope="col">ID</th>
-								  <th scope="col">Vehicle</th>
-								  <th scope="col">Terminal</th>
-								  
-								  <th scope="col">Start date</th>
-								  <th scope="col"> Step</th>
-								  <th scope="col">Status</th>
-								  <th scope="col">Action</th>
-								</tr>
-							  </thead>
-							 
-							  <tbody style="border-style: none none none groove; border-color:#B0C4DE; background-color:#F0F8FF;font-family:Arial;">
-								  @foreach($loadings as $loading)
-									
-									<tr>
-									  <td ><a href="{{ route('loading.loadings.show', $loading->id)}}">{{ $loading->id }}</a> </td>
-									  <td>
-											@foreach($vehicles as $vehicle)
-												@if($vehicle->id == $loading->vehicle_id)
-													{{ $vehicle->code }}
-												@endif
-											@endforeach
-									  </td>
-									  <td>{{ $loading->terminal }} </td>
-									  
-
-									  
-									  <td>
-											@if($loading->start_date == '')
-												 {{ 'Not indicated' }}
-											@else
-												{{ $loading->start_date }}
-											@endif
-									   </td>
-									  <td>
-										
-										@if($loading->step == '')
-												 {{ '-' }}
-											@else
-												{{ $loading->step }}
-											@endif
-									  </td>
-										
-									  <td class="text-center">
-									  	@if( $loading->status == 'Ready for delivery')
-											<div class="badge badge-success">{{ $loading->status }} </div>
-										@elseif( $loading->status == 'In progress')
-											<div class="badge badge-warning">{{ $loading->status }} </div>
-										@else
-											<div class="badge badge-danger">{{ $loading->status }} </div>
-										@endif  
-									  </td>
-									  <td>
-
-									  
-									 
-									  
-									  @can('delete-users')
-									  <form action ="{{ route('loading.loadings.destroy', $loading)}}" method = "POST" class="" >
-										@csrf
-										{{ method_field('DELETE') }}
-										<button type="submit" class="btn btn-danger">Void</button> </td>
-									  </form>
-									  @endcan
-									 
-									</tr>
-								  @endforeach						
-							  </tbody>
-							</table>
-						</div>
-					  </div> <!-- end content -->
-					  @endsection

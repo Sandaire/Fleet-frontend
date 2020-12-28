@@ -1,18 +1,20 @@
 @extends('layouts.admin')
 
-				  @section('panel')
+				  @section('content')
+				  
 					<!-- Content -->
 					  <div class="column content">
+					  <div class="card-header">
 						<a href="{{ route('admin.users.create') }}">
 							<button type="button" class="btn btn-warning" style="color:#ffffff; font-size: 17px; font-family: arial"> 
 							<i class="fa fa-plus" aria-hidden="true" title="Copy to use plus"> </i>
 							New user 
 							</button>
 						</a>
-
+				</div>
 							<div class="card-body">
 							
-							<table class = "table">
+							<table class = "table" >
 							  <thead>
 								<tr>
 								  <th scope="col">Name</th>
@@ -24,7 +26,7 @@
 							  <tbody>
 								  @foreach($users as $user)
 								  
-									 <tr style="background-color:#F0F8FF; border-style: none none none groove; border-color:#B0C4DE">
+									 <tr>
 									  <td>
 									  <i class="fa fa-user-circle fa-2x" aria-hidden="true" title="Copy to use user-circle"> </i>	  
 									  <a href="{{ route('admin.users.show', $user->id)}}">

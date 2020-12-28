@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
  
@@ -13,9 +14,8 @@ var dt = require( 'datatables.net' )();
 
 </script>
 <!--  -->
-
-@section('panel')
-
+            
+            @section('content')	
 
 
 <!-- <main class="main">
@@ -29,8 +29,10 @@ var dt = require( 'datatables.net' )();
    </header>
 </main> -->
   <!--START:: SECTION CARD PERCENTAGE-->
+  <div class="card-header">Sodigaz</div>
+</br>
   <div class="row">
-    <div class="col-md-6 col-lg-3">
+    <div class="col-mb-6 col-lg-3">
         <div class="card-info mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">
                 <div class="widget-content-outer">
@@ -591,13 +593,6 @@ var dt = require( 'datatables.net' )();
                                                     <div class="card-body">
                                                         <h5 class="card-title">Total Vehicles</h5>
                                                         <canvas id="chart-area"></canvas>
-                                                        <div class="" style="margin-top:-200px; float:right">
-                                                        <p style="color:#008a74; font-size:36px; font:Arial"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">On Route </h6> </p>
-                                                        <p style="color:#FDB45C; font-size:36px; font:Arial"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">Available </h6> </p>
-                                                        <p style="color:#F7464A; font-size:36px; font:Arial;"> | 
-                                                            <h6 style="margin-top:-45px; margin-left: 10px">Out of service </h6> </p></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -616,8 +611,7 @@ var dt = require( 'datatables.net' )();
                                         <!-- START Pagination -->
                                         <!-- Table with panel -->
                                         <!-- <div class="card card-cascade narrower">
-
-                                        <!--Card image-->
+                                            Card image-->
                                         <!-- <div class="view view-cascade warning-card-header yellow-warning narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center"> -->
 
                                             <!-- <div>

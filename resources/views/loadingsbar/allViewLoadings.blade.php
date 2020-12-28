@@ -1,29 +1,21 @@
-<!--params to make filter-->
-
 <table class = "table" style="width:100%">
-	<thead>
-		<tr>
-		<th scope="col">Vehicle</th>
-		<th scope="col">Position</th>
-		<th scope="col">Immat</th>
-		<th scope="col">Number of tanks</th>
-		<th scope="col">Capacity</th>
-		<th scope="col">Condition</th>
-		<th scope="col">Status</th>
-		<th scope="col">Action</th>
-		</tr>
-	</thead>
-	<?php 
-		$itemfilters = $vehicles->filter(function($item) {
-			return $item->status == 'Assigned task';
-		});
-	?>
-
-	<tbody >
-		@foreach($itemfilters as $vehicle)	
+<thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Vehicle</th>
+        <th scope="col">Terminal</th>
+        
+        <th scope="col">Start date</th>
+        <th scope="col"> Step</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+    </tr>
+</thead>
+	<tbody>
+		@foreach($loadingstatus as $vehicle)	
 			<tr>
-				<td><a href="{{ route('vehicle.vehicles.show', $vehicle->id)}}">{{ $vehicle->code }}</a> </td>
-				<td> 
+				<td><a href="{{ route('vehicle.loadingstatus.show', $vehicle->id)}}">{{ $vehicle->code }}</a> </td>
+				<td>
 						@if( $vehicle->position  == "")
 							{{ 'Not indicated' }}
 						@else
@@ -57,7 +49,7 @@
 
 				<td class="text-justify" style="width: 150px">
 					@can('edit-users')
-						<a href="{{ route('vehicle.vehicles.edit', $vehicle->id)}}">
+						<a href="{{ route('vehicle.loadingstatus.edit', $vehicle->id)}}">
 							<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-warning" style ="float:left">
 								<i class="fa fa-fw" aria-hidden="true" title="Copy to use pencil-square-o"></i>
 							</button>
@@ -66,7 +58,7 @@
 					
 					
 					@can('delete-users')
-					<form action ="{{ route('vehicle.vehicles.destroy', $vehicle)}}" method = "POST" class="" >
+					<form action ="{{ route('vehicle.loadingstatus.destroy', $vehicle)}}" method = "POST" class="" >
 						@csrf
 						{{ method_field('DELETE') }}
 						<button type="submit" class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger" style=" margin-left:2px"> 
@@ -82,19 +74,19 @@
 					</form>
 					@endcan
 				</td>
-			</tr></span>
+			</tr>
 		@endforeach						
 	</tbody>
 	<tfooter>
-		<tr>
-		<th scope="col">Vehicle</th>
-		<th scope="col">Position</th>
-		<th scope="col">Immat</th>
-		<th scope="col">Number of tanks</th>
-		<th scope="col">Capacity</th>
-		<th scope="col">Condition</th>
-		<th scope="col">Status</th>
-		<th scope="col">Action</th>
-		</tr>
+	<tr>
+        <th scope="col">ID</th>
+        <th scope="col">Vehicle</th>
+        <th scope="col">Terminal</th>
+        
+        <th scope="col">Start date</th>
+        <th scope="col"> Step</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+    </tr>
 	</tfooter>
 </table>

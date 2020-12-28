@@ -1,15 +1,17 @@
 @extends('layouts.admin')
 
-				  @section('panel')
+				  @section('content')
 					<!-- Content -->
+					<div class="card-header">Edit Loading vehicles</div></br>
 					  <div class="column content">						
 							
-							<div class="card-body">
+							<div class="card-body" style="border-style: solid; border-radius:20px; width:800px; margin-left: 210px; border-color: #A9A9A9; background-color:white">
+							<img style="width:140px; float: bottom; margin-top: 60px " src="{{ asset('images/truck-available.png') }}">
 								<form method="POST" action="{{ route('loading.loadings.update', $loading) }}">
 									@csrf
 									
 									@method('PUT')
-									<div class="form-group row">
+									<div class="form-group row" style="margin-top:-158px">
 										<label for="vehicle" class="col-md-4 col-form-label text-md-right">{{ __('Vehicle') }}</label>
 
 										<div class="col-md-6">
@@ -83,11 +85,12 @@
 									
 									<div class="form-group row mb-0">
 										<div class="col-md-6 offset-md-4">
-											<button type="submit" class="btn btn-primary">
+											<button type="submit" class="btn btn-success" style="border-radius:20px; width: 150px">
 												{{ __('Update') }}
 											</button>
-											<button type="text" class="btn btn-default">
-												{{ ('Cancel') }}
+											<button type="text" class="btn btn-outline-danger" style="height:40px; color:black; font-size: 20px; font-family: arial; border-radius:100%">
+											<i class="fa fa-times" aria-hidden="true" style="margin-top:3px"></i>
+												<!-- {{ ('Cancel') }} -->
 											</button>
 										</div>
 									</div>

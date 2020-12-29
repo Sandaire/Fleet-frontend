@@ -14,7 +14,7 @@ var dt = require( 'datatables.net' )();
 </script>
 <!--  -->
 
-@section('panel')
+@section('content')
 
 
 
@@ -30,7 +30,7 @@ var dt = require( 'datatables.net' )();
 </main> -->
   <!--START:: SECTION CARD PERCENTAGE-->
   <div class="row">
-  <h3> SODIGAZ</h3>
+  <div class="card-hearder"> Real Time</div>
     <div class="col-md-6 col-lg-3">
         <div class="card-info mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-content">

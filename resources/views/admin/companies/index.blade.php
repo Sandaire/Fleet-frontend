@@ -7,7 +7,7 @@
 						<div class="card-header">
 							<a href="{{ route('admin.companies.create') }}">
 								<button class="btn btn-warning" style="color:#ffffff; font-size: 17px; font-family: arial"> 
-									<i class="fa fa-plus" aria-hidden="true" title="Copy to use plus"> </i> New company
+									<i class="fa fa-plus" aria-hidden="true" title="Copy to use plus"> </i> Add Company
 								</button>
 							</div>
 						</a>

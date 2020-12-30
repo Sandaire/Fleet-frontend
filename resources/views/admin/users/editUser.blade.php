@@ -108,24 +108,23 @@
 		</div>
 
 		<div class="col-md-3">
-		<div class="main-card mb-3 card" style="background: linear-gradient(to bottom,  #008a74 25%, #ffffff 25%);">
-			<div class="card-body">
-				<h5 class="card-title" style="color:white">Profils User</h5>
-				</br>
-			</div></br>
-			<center>
-			<img style="width:100px; margin-top:-65px" src="{{ asset('images/user-image-with-black-background.png') }}">
-		</center>
+			<div class="main-card mb-3 card" style="background: linear-gradient(to bottom,  #008a74 25%, #ffffff 25%);">
+				<div class="card-body">
+					<h5 class="card-title" style="color:white">Profils User</h5>
+					</br>
+				</div></br>
+				<center>
+				<img style="width:100px; margin-top:-65px" src="{{ asset('images/user-image-with-black-background.png') }}">
+				</center>
 
-		</br>
-		<center>
-			<h5 style="color:Orange"> First Name </h5>
-			<h6> email</h6>
-			<hr>
-			<h5 style="color:Green"> Manager </h5>
-			</center>
-		</div>
-		
+			</br>
+			<center>
+				<h5 style="color:Orange"> First Name </h5>
+				<h6> email</h6>
+				<hr>
+				<h5 style="color:Green"> Manager </h5>
+				</center>
+			</div>
 		</div>
 	</div>
 			
